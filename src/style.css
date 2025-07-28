@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Animacje */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Klasy bazowe — startowy stan (ukryty + przesunięcie) */
+.fade-in-right,
+.fade-in-left,
+.fade-in-down,
+.fade-in-up {
+  opacity: 0;
+}
+
+/* Dodawane dynamicznie przez JS */
+.fade-in-right.animate {
+  animation: fadeInRight 1.5s ease-out forwards;
+}
+
+.fade-in-left.animate {
+  animation: fadeInLeft 1.5s ease-out forwards;
+}
+
+.fade-in-down.animate {
+  animation: fadeInDown 1.5s ease-out forwards;
+}
+.fade-in-up.animate {
+  animation: fadeInUp 1.5s ease-out forwards;
+}
